@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
 class ExampleController extends Controller
 {
     /**
@@ -14,5 +16,7 @@ class ExampleController extends Controller
         //
     }
 
-    //
+    public function postAPI(Request $request) {
+        return response($request->name, 200);
+    }
 }
